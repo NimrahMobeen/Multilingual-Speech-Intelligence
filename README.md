@@ -1,179 +1,56 @@
-Great — here is a **professional, polished, GitHub-ready README.md** for your project, based entirely on your project history and goals.
+# 🌍 Multilingual Speech Intelligence System
 
----
-
-# 📄 **README.md — Multilingual Speech Intelligence System**
-
-```markdown
-# 🌍 Multilingual Speech Intelligence System  
-### Real-time Transcription • Translation • Bilingual Summaries • Language-Aware AI
-
-The **Multilingual Speech Intelligence System** is an advanced audio-to-text intelligence pipeline that performs:
-
-- 🎙️ **Speech Recognition** (multilingual)  
-- 🌍 **Language Detection**  
-- 🔁 **Translation**  
-- ✍️ **Bilingual Summaries**  
-- 🧠 **AI-Enhanced Text Understanding**
-
-Built using modern speech models and LLM-driven summarization, this system is designed for multilingual workflows, call analytics, meetings, media processing, and AI-powered transcription tools.
+The Multilingual Speech Intelligence System automates multilingual conversation analysis using advanced speech recognition and natural language models. It provides transcription, translation, bilingual summaries, emotion detection, background detection, voice matching, and speaker biographics for languages including Dari, Pashto, Urdu, Arabic, and English.
 
 ---
 
 ## 🚀 Features
-
-### 🎧 **1. Multilingual Speech Transcription**
-- Uses state-of-the-art speech-to-text models (e.g., Whisper)
-- Supports dozens of global languages
-- Accurate for accents, noisy audio, and long recordings
-
-### 🌐 **2. Language Detection**
-Automatically identifies the spoken language and routes it through the right summarization/translation pipeline.
-
-### 🔁 **3. Smart Translation**
-- Translates transcriptions into any target language
-- Supports bilingual/dual-output modes
-
-### ✍️ **4. Bilingual Summarization Engine**
-- Generates concise summaries in **two languages**
-- Extractive or abstractive AI summarization
-- Perfect for education, content localization, and professional workflows
-
-### 🧠 **5. Modular Intelligence Pipeline**
-Plug-and-play architecture:
-- Speech → Text  
-- Text → Summary  
-- Summary → Bilingual Output  
-
-Each module can be used independently.
+- 🎙️ Multilingual Speech Transcription  
+- 🌐 Language Detection  
+- 🔁 Translation (multi-target)  
+- ✍️ Bilingual Summaries  
+- 😊 Emotion Detection  
+- 🎧 Background/Noise Detection  
+- 🗣️ Voice Matching  
+- 👤 Speaker Biographics Inference  
 
 ---
 
-## 🏗️ Project Structure
-
-```
-
-multilingual-speech-intelligence/
+## 📁 Project Structure
+Multilingual-Speech-Intelligence/
 │
 ├── bilingual_summarizer/
-│   ├── **init**.py
-│   ├── summarizer.py
-│   ├── translator.py
-│   └── utils.py
+│ ├── init.py
+│ ├── summarizer.py
+│ ├── translator.py
+│ └── utils.py
 │
-├── models/
-│   └── (downloaded speech & NLP models)
+├── models/ # speech & NLP models stored here
 │
-├── app.py
-├── main.py
+├── app.py # main execution script
+├── main.py # optional pipeline runner
 ├── requirements.txt
 ├── README.md
 └── LICENSE
 
-````
-
----
 
 ## 🛠️ Installation
+### 1. Clone the repository
 
-### **1. Clone the repository**
-```bash
-git clone https://github.com/yourname/multilingual-speech-intelligence
-cd multilingual-speech-intelligence
-````
+git clone https://github.com/<your-username>/Multilingual-Speech-Intelligence.git
+cd Multilingual-Speech-Intelligence
 
-### **2. Create a virtual environment**
-
-```bash
+2. Create virtual environment
 python -m venv env
-source env/bin/activate      # macOS / Linux
-env\Scripts\activate         # Windows
-```
+source env/bin/activate    # macOS/Linux
+env\Scripts\activate       # Windows
 
-### **3. Install dependencies**
-
-```bash
+3. Install dependencies
 pip install -r requirements.txt
-```
 
----
+▶️ Usage
+Transcribe audio
+python app.py --audio input.wav
 
-## ▶️ Usage
-
-### **Transcribe an audio file**
-
-```bash
-python app.py --audio sample.wav
-```
-
-### **Generate a bilingual summary**
-
-```bash
-python app.py --audio sample.wav --summary --language en --target es
-```
-
-### **Use the summarizer as a module**
-
-```python
-from bilingual_summarizer.summarizer import BilingualSummarizer
-
-summ = BilingualSummarizer()
-result = summ.summarize("Your text here...", src="en", tgt="es")
-print(result)
-```
-
----
-
-## 📚 Requirements
-
-* Python **3.10+**
-* PyTorch
-* Whisper / transformers
-* SentencePiece / fastText (optional)
-
-These will be installed automatically via `requirements.txt`.
-
----
-
-## 📌 Roadmap
-
-* [ ] Add streaming real-time transcription
-* [ ] Add sentiment and topic analysis
-* [ ] Add web UI (Streamlit / FastAPI)
-* [ ] Speaker diarization
-* [ ] Cloud deployment template
-
----
-
-## 🤝 Contributing
-
-Pull requests are welcome!
-For major updates, open an issue first to discuss the change.
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — free to use, modify, and distribute.
-
----
-
-## ⭐ Show Your Support
-
-If you like this project, please **star the repository** — it helps others discover it!
-
-```
-
----
-
-If you want, I can also generate:
-
-✅ `requirements.txt`  
-✅ `.gitignore`  
-✅ MIT `LICENSE`  
-✅ Folder structure scaffolding  
-✅ Full Python code template for your repo  
-
-Just tell me:  
-**"Generate full repo files"**
-```
+Bilingual summary
+python app.py --audio input.wav --summary --src en --tgt ar
