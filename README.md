@@ -1,4 +1,4 @@
-# TTS Audio Processing API
+# Audio Processing API
 
 Production-grade audio processing API with support for transcription, translation, speaker analysis, and audio classification.
 
